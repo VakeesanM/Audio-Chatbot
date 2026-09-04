@@ -1,8 +1,11 @@
 from langchain_core.tools import tool
 from langchain_community.document_loaders import WebBaseLoader
+from typing import Dict
+import asyncio
+
 
 @tool
-def open_url(url: str):
+def open_url(url: Dict):
     """
     Scrapes and returns the contents of website
 
